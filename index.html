@@ -1,64 +1,71 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RareXTechiez | Engineering India's Defense Future</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #0d1117;
+      color: #f0f6fc;
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1534081333815-ae5019106621') no-repeat center center/cover;
-      color: white;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1534081333815-ae5019106621') no-repeat center center/cover;
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px;
       animation: fadeIn 1.5s ease-in-out;
     }
 
     .hero h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 3em;
       margin: 0;
+      color: #58a6ff;
     }
 
     .hero p {
       font-size: 1.5em;
+      color: #c9d1d9;
     }
 
     .cta-buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 10px 20px;
-      background: #007bff;
+      padding: 12px 25px;
+      background: #238636;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-weight: bold;
     }
 
     .cta-buttons a:hover {
-      background: #0056b3;
+      background: #2ea043;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     section {
-      padding: 50px 20px;
-      background: white;
-      margin: 20px auto;
+      padding: 60px 20px;
+      background: #161b22;
+      margin: 30px auto;
       max-width: 900px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-in-out;
+      transform: translateY(40px);
+      transition: all 0.8s ease-in-out;
     }
 
     section.visible {
@@ -68,48 +75,60 @@
 
     h2 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #58a6ff;
     }
 
     .product, .member {
       margin-bottom: 20px;
-      background: #e9ecef;
+      background: #21262d;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover, .member:hover {
+      transform: scale(1.02);
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
     }
 
     input, textarea {
-      padding: 10px;
+      padding: 12px;
       font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      background: #0d1117;
+      color: white;
     }
 
     button {
-      padding: 10px;
-      background: #28a745;
+      padding: 12px;
+      background: #238636;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 30px;
+      font-size: 1em;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     button:hover {
-      background: #1c7d35;
+      background: #2ea043;
+      transform: translateY(-1px);
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #343a40;
-      color: white;
+      background: #010409;
+      color: #8b949e;
+      font-size: 0.9em;
     }
 
     @keyframes fadeIn {
@@ -118,15 +137,14 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2em; }
+      .hero h1 { font-size: 2.2em; }
       .hero p { font-size: 1.2em; }
-      .cta-buttons a { width: 100%; display: block; margin: 10px auto; }
+      .cta-buttons a { width: 100%; display: block; margin: 12px auto; }
       section { padding: 30px 15px; }
     }
   </style>
 </head>
 <body>
-  <!-- Hero Section -->
   <header class="hero">
     <h1>RareXTechiez</h1>
     <p>Engineering India's Defense Future</p>
@@ -136,13 +154,11 @@
     </div>
   </header>
 
-  <!-- About Section -->
   <section id="about">
     <h2>About Us</h2>
     <p>RareXTechiez is a student-founded defense technology startup aiming to develop indigenous innovations in robotics, AI, and manufacturing to empower India's strategic capabilities.</p>
   </section>
 
-  <!-- Technology Section -->
   <section id="tech">
     <h2>Our Technologies</h2>
     <div class="product">
@@ -159,13 +175,11 @@
     </div>
   </section>
 
-  <!-- Portfolio Section -->
   <section id="portfolio">
     <h2>Portfolio & Demos</h2>
     <p>Demo videos and working prototype footage coming soon.</p>
   </section>
 
-  <!-- Team Section -->
   <section id="team">
     <h2>Our Team</h2>
     <div class="member">
@@ -174,24 +188,21 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <form id="contact-form">
-      <input type="text" placeholder="Your Name" id="name" required />
-      <input type="email" placeholder="Your Email" id="email" required />
+      <input type="text" placeholder="Your Name" id="name" required>
+      <input type="email" placeholder="Your Email" id="email" required>
       <textarea placeholder="Your Message" id="message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p id="form-response" style="margin-top:10px; color: green;"></p>
+    <p id="form-response" style="margin-top:10px; color: #3fb950;"></p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 RareXTechiez | Made in India. Made for Defense.</p>
   </footer>
 
-  <!-- JavaScript -->
   <script>
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -205,21 +216,17 @@
         return;
       }
 
-      document.getElementById('form-response').style.color = 'green';
-      document.getElementById('form-response').textContent = 'Thank you for contacting us, ' + name + '!';
+      document.getElementById('form-response').textContent = `Thank you, ${name}, for reaching out! We'll get back to you soon.`;
       document.getElementById('contact-form').reset();
     });
 
-    // Animate sections on scroll
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('section').forEach(section => {
       observer.observe(section);
