@@ -1,0 +1,229 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RareXTechiez | Engineering India's Defense Future</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1534081333815-ae5019106621') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+    }
+
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .cta-buttons a:hover {
+      background: #0056b3;
+    }
+
+    section {
+      padding: 50px 20px;
+      background: white;
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .product, .member {
+      margin-bottom: 20px;
+      background: #e9ecef;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #1c7d35;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #343a40;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2em; }
+      .hero p { font-size: 1.2em; }
+      .cta-buttons a { width: 100%; display: block; margin: 10px auto; }
+      section { padding: 30px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>RareXTechiez</h1>
+    <p>Engineering India's Defense Future</p>
+    <div class="cta-buttons">
+      <a href="#tech">Explore Our Tech</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>RareXTechiez is a student-founded defense technology startup aiming to develop indigenous innovations in robotics, AI, and manufacturing to empower India's strategic capabilities.</p>
+  </section>
+
+  <!-- Technology Section -->
+  <section id="tech">
+    <h2>Our Technologies</h2>
+    <div class="product">
+      <h3>RX-DR1: Autonomous Recon Drone</h3>
+      <p>Surveillance drone built for border patrol with thermal vision and GPS navigation.</p>
+    </div>
+    <div class="product">
+      <h3>RX-RBot: Ground Bomb Disposal Unit</h3>
+      <p>UGV designed for remote-controlled neutralization of explosives in high-risk zones.</p>
+    </div>
+    <div class="product">
+      <h3>RX-AIDE: AI Surveillance Interface</h3>
+      <p>AI-powered command system for real-time surveillance data processing and alerts.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Portfolio & Demos</h2>
+    <p>Demo videos and working prototype footage coming soon.</p>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="member">
+      <h3>Your Name</h3>
+      <p>Founder & Visionary | Math & Computer Science Graduate</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" id="name" required />
+      <input type="email" placeholder="Your Email" id="email" required />
+      <textarea placeholder="Your Message" id="message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-response" style="margin-top:10px; color: green;"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 RareXTechiez | Made in India. Made for Defense.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      if (!name || !email || !message) {
+        document.getElementById('form-response').style.color = 'red';
+        document.getElementById('form-response').textContent = 'Please fill in all fields.';
+        return;
+      }
+
+      document.getElementById('form-response').style.color = 'green';
+      document.getElementById('form-response').textContent = 'Thank you for contacting us, ' + name + '!';
+      document.getElementById('contact-form').reset();
+    });
+
+    // Animate sections on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
